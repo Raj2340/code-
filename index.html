@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Invitation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+            position: relative;
+        }
+
+        .heart {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transform: rotate(-45deg);
+            animation: beat 1s infinite;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart:before {
+            top: -50px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 50px;
+            top: 0;
+        }
+
+        @keyframes beat {
+            0%, 20%, 50%, 80%, 100% {
+                transform: scale(1);
+            }
+            10%, 30%, 40%, 60%, 70% {
+                transform: scale(1.1);
+            }
+        }
+
+        .invitation {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            color: #ff4081;
+        }
+
+        p {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heart"></div>
+
+    <div class="invitation">
+        <h1>You're Invited to Raj's Birthday Party!</h1>
+        <p><strong>Date:</strong> October 1</p>
+        <p><strong>Time:</strong> 12 PM</p>
+        <p><strong>Venue:</strong> The Pizza Story</p>
+        <p>Come hungry for pizza and ready for a great time!</p>
+    </div>
+
+</body>
+</html>
